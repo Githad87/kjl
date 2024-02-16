@@ -364,7 +364,7 @@ player.Properties.Scores.Value += 1000000000;
 //зона адм
 var adcTrigger =
 AreaPlayerTriggerService.Get("50")
-adcTrigger.Tags = ["50"];
+adcTrigger.Tags = ["100"];
 adcTrigger.Enable = true;
 adcTrigger.OnEnter.Add(function(player){
 player.Ui.Hint.Value = "ты ПОЛУЧАЕШ ПО 50"
