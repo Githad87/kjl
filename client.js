@@ -935,21 +935,7 @@ player.inventory.ExplosiveInfinity.Value = true;
 player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ГРАНАТЫ"
 }
 });
-
-//зона адм
-var adcTrigger =
-AreaPlayerTriggerService.Get("бллл")
-adcTrigger.Tags = ["блоки"];
-adcTrigger.Enable = true;
-adcTrigger.OnEnter.Add(function(player){
-player.Ui.Hint.Value = "СТОИМОСТЬ блоков 1000 РУБ"
-if (player.Properties.Scores.Value > 1000){
-player.Properties.Scores.Value -= 1000;
-player.inventory.Build.Value = true;
-player.inventory.Build.Value = true;
-player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) блоки"
-}
-});
+;
 
 
  //зона адм
