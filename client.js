@@ -968,13 +968,4 @@ player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ПИСТОЛЕТ"
 });
 
 
- //зона адм
-var adcTrigger =
-AreaPlayerTriggerService.Get("нож")
-adcTrigger.Tags = ["нож"];
-adcTrigger.Enable = true;
-adcTrigger.OnEnter.Add(function(player){
-player.inventory.Melee.Value = true;
-player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) НОЖ"
-});
  
