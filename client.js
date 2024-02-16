@@ -908,15 +908,3 @@ cnTrigger.OnEnter.Add(function(player){
 Teams.Get("Blue").Add(player);
 });
 
-ver ПОЛЁТ =                           AreaPlayerTriggerService.Get("ПОЛЁТ");                                   ПОЛЁТ.Tags =["ПОЛЁТ"];                 ПОЛЁТ.Enable = true;                  ПОЛЁТ.OnEnter.Add(function(player,area){
-
-
-if(player.Properties.Get(LeaderBoardProp).Value >=1000000){
-player.Ui.Hint.Value ="КУПЛЕН ПОЛЁТ";
-player.Properties.Get(LeaderBoardProp).Value -=1000000;
-player.Build.FlyEnable.Value = true;
-}alse{
-player.Ui.Hint.Value ="1000000 СТОИТ ПОЛЁТ,А У ТЕБЯ"+
-player.Properties.Get(LeaaderBoardProp).Value;
-}
-});
