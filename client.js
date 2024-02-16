@@ -909,33 +909,6 @@ Teams.Get("Blue").Add(player);
 });
 
 
-//зона адм
-var adcTrigger =
-AreaPlayerTriggerService.Get("полет")
-adcTrigger.Tags = ["полет"];
-adcTrigger.Enable = true;
-adcTrigger.OnEnter.Add(function(player){
-player.Ui.Hint.Value = "СТОИМОСТЬ ПОЛЕТА 10000РУБ"
-if (player.Properties.Scores.Value > 10000){
-player.Properties.Scores.Value -= 10000;
-player.Build.FlyEnable.Value = true;
-player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ПОЛЕТ"
-
- //зона адм
-var adcTrigger =
-AreaPlayerTriggerService.Get("гранаты")
-adcTrigger.Tags = ["гранаты"];
-adcTrigger.Enable = true;
-adcTrigger.OnEnter.Add(function(player){
-player.Ui.Hint.Value = "СТОИМОСТЬ ГРАНАТ 900 РУБ"
-if (player.Properties.Scores.Value > 900){
-player.Properties.Scores.Value -= 900;
-player.inventory.Explosive.Value = true;
-player.inventory.ExplosiveInfinity.Value = true;
-player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ГРАНАТЫ"
-}
-});
-;
 
 
  //зона адм
