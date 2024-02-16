@@ -908,3 +908,73 @@ cnTrigger.OnEnter.Add(function(player){
 Teams.Get("Blue").Add(player);
 });
 
+
+//зона адм
+var adcTrigger =
+AreaPlayerTriggerService.Get("полет")
+adcTrigger.Tags = ["полет"];
+adcTrigger.Enable = true;
+adcTrigger.OnEnter.Add(function(player){
+player.Ui.Hint.Value = "СТОИМОСТЬ ПОЛЕТА 10000РУБ"
+if (player.Properties.Scores.Value > 10000){
+player.Properties.Scores.Value -= 10000;
+player.Build.FlyEnable.Value = true;
+player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ПОЛЕТ"
+
+ //зона адм
+var adcTrigger =
+AreaPlayerTriggerService.Get("гранаты")
+adcTrigger.Tags = ["гранаты"];
+adcTrigger.Enable = true;
+adcTrigger.OnEnter.Add(function(player){
+player.Ui.Hint.Value = "СТОИМОСТЬ ГРАНАТ 900 РУБ"
+if (player.Properties.Scores.Value > 900){
+player.Properties.Scores.Value -= 900;
+player.inventory.Explosive.Value = true;
+player.inventory.ExplosiveInfinity.Value = true;
+player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ГРАНАТЫ"
+}
+});
+
+//зона адм
+var adcTrigger =
+AreaPlayerTriggerService.Get("бллл")
+adcTrigger.Tags = ["блоки"];
+adcTrigger.Enable = true;
+adcTrigger.OnEnter.Add(function(player){
+player.Ui.Hint.Value = "СТОИМОСТЬ блоков 1000 РУБ"
+if (player.Properties.Scores.Value > 1000){
+player.Properties.Scores.Value -= 1000;
+player.inventory.Build.Value = true;
+player.inventory.Build.Value = true;
+player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) блоки"
+}
+});
+
+
+ //зона адм
+var adcTrigger =
+AreaPlayerTriggerService.Get("пест")
+adcTrigger.Tags = ["пест"];
+adcTrigger.Enable = true;
+adcTrigger.OnEnter.Add(function(player){
+player.Ui.Hint.Value = "СТОИМОСТЬ ПИСТОЛЕТА 3000 РУБ"
+if (player.Properties.Scores.Value > 3000){
+player.Properties.Scores.Value -= 3000;
+player.inventory.Secondary.Value = true;
+player.inventory.SecondaryInfinity.Value = true;
+player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ПИСТОЛЕТ"
+}
+});
+
+
+ //зона адм
+var adcTrigger =
+AreaPlayerTriggerService.Get("нож")
+adcTrigger.Tags = ["нож"];
+adcTrigger.Enable = true;
+adcTrigger.OnEnter.Add(function(player){
+player.inventory.Melee.Value = true;
+player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) НОЖ"
+});
+ 
