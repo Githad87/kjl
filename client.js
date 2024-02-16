@@ -363,12 +363,12 @@ player.Properties.Scores.Value += 1000000000;
 });
 //зона адм
 var adcTrigger =
-AreaPlayerTriggerService.Get("50")
+AreaPlayerTriggerService.Get("100")
 adcTrigger.Tags = ["100"];
 adcTrigger.Enable = true;
 adcTrigger.OnEnter.Add(function(player){
-player.Ui.Hint.Value = "ты ПОЛУЧАЕШ ПО 50"
-player.Properties.Scores.Value += 50;
+player.Ui.Hint.Value = "ты ПОЛУЧАЕШ ПО 100"
+player.Properties.Scores.Value += 100;
 });
 //зона адм
 var adcTrigger =
