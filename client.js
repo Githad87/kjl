@@ -930,13 +930,7 @@ player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ПИСТОЛЕТ"
  
 //зона адм
 var adcTrigger =
-AreaPlayerTriggerService.Get("нож")
-adcTrigger.Tags = ["нож"];
-adcTrigger.Enable = true;
-adcTrigger.OnEnter.Add(function(player){
-player.inventory.Melee.Value = true;
-player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) НОЖ"
-});
+AreaPlayerTriggerS
 
 
 var PassAreaTag = "Pass";
@@ -971,6 +965,25 @@ ExplosiveTrigger.OnEnter.Add(function(player){
 player.Ui.Hint.Value = " стоит 1000 очков, а у вас " + player.Properties.Kills.Value;
 if (player.Properties.Scores.Value > 999){
  player.Properties.Scores.Value -= 1000;
+ player.inventory.Explosive.Value = true;
+ player.Ui.Hint.Value = "Вы купили гранаты";
+}});
+
+
+var ExplosiveAreaTag = "Explosive";
+var ViewsExplosiveParameterName = "VivewsExplosive";
+var ExplosiveAreas = AreaService.GetByTag(ExplosiveAreaTag);
+var ExplosiveView = AreaViewService.GetContext().Get("ExplosiveView");
+ExplosiveView.Color = {r:0,g:0,b:1};
+ExplosiveView.Tags = ["gren"];
+ExplosiveView.Enable = true;
+var ExplosiveTrigger = AreaPlayerTriggerService.Get("ExplosiveTrigger");
+ExplosiveTrigger.Tags = ["gren"];
+ExplosiveTrigger.Enable = true;
+ExplosiveTrigger.OnEnter.Add(function(player){
+player.Ui.Hint.Value = "Гранаты стоят 20000 очков, а у вас " + player.Properties.Kills.Value;
+if (player.Properties.Scores.Value > 19999){
+ player.Properties.Scores.Value -= 20000;
  player.inventory.Explosive.Value = true;
  player.Ui.Hint.Value = "Вы купили гранаты";
 }});
