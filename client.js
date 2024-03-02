@@ -891,10 +891,10 @@ var ViewsExplosiveParameterName = "VivewsExplosive";
 var ExplosiveAreas = AreaService.GetByTag(ExplosiveAreaTag);
 var ExplosiveView = AreaViewService.GetContext().Get("ExplosiveView");
 ExplosiveView.Color = {r:0,g:0,b:1};
-ExplosiveView.Tags = ["gren"];
+ExplosiveView.Tags = ["hoj"];
 ExplosiveView.Enable = true;
 var ExplosiveTrigger = AreaPlayerTriggerService.Get("ExplosiveTrigger");
-ExplosiveTrigger.Tags = ["gren"];
+ExplosiveTrigger.Tags = ["hoj"];
 ExplosiveTrigger.Enable = true;
 ExplosiveTrigger.OnEnter.Add(function(player){
 player.Ui.Hint.Value = "  нож стоит 1000 очков, а у вас " + player.Properties.Kills.Value;
