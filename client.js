@@ -866,10 +866,6 @@ player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) ПИСТОЛЕТ"
 });
 
 
- 
-//зона адм
-var adcTrigger =
-AreaPlayerTriggerS
 
 
 var PassAreaTag = "Pass";
