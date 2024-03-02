@@ -847,67 +847,6 @@ player.Spawns.Spawn();
 } 
 });
 
-mTrigger =  AreaPlayerTriggerService.Get("M"); 
-mTrigger.Tags = ["M"]; 
-mTrigger.Enable = true; 
-mTrigger.OnEnter.Add(function(player){ 
-player.inventory.Main.Value = true; 
-}
-);
-sTrigger =  AreaPlayerTriggerService.Get("S"); 
-sTrigger.Tags = ["S"]; 
-sTrigger.Enable = true; 
-sTrigger.OnEnter.Add(function(player){ 
-player.inventory.Secondary.Value = true; 
-}
-);
-mTrigger =  AreaPlayerTriggerService.Get("M"); 
-mTrigger.Tags = ["M"]; 
-mTrigger.Enable = true; 
-mTrigger.OnEnter.Add(function(player){ 
-player.inventory.Main.Value = true; 
-}
-);
-mlTrigger =  AreaPlayerTriggerService.Get("ML"); 
-mlTrigger.Tags = ["ML"]; 
-mlTrigger.Enable = true; 
-mlTrigger.OnEnter.Add(function(player){ 
-player.inventory.Melle.Value = true; 
-}
-);
-bTrigger =  AreaPlayerTriggerService.Get("B"); 
-bTrigger.Tags = ["B"]; 
-bTrigger.Enable = true; 
-bTrigger.OnEnter.Add(function(player){ 
-player.inventory.Block.Value = true; 
-}
-);
-eTrigger =  AreaPlayerTriggerService.Get("E"); 
-eTrigger.Tags = ["E"]; 
-eTrigger.Enable = true; 
-eTrigger.OnEnter.Add(function(player){ 
-player.inventory.Explosive.Value = true; 
-}
-);
-
-
-hpTrigger =  AreaPlayerTriggerService.Get("HP"); 
-hpTrigger.Tags = ["HP"]; 
-hpTrigger.Enable = true; 
-hpTrigger.OnEnter.Add(function(player){ 
-player.contextedProperties.MaxHp.Value = Infinity;
-}
-);
-
-
-var cnTrigger =
-AreaPlayerTriggerService.Get("перенос")
-cnTrigger.Tags = ["перенос"];
-cnTrigger.Enable = true;
-cnTrigger.OnEnter.Add(function(player){
-Teams.Get("Blue").Add(player);
-});
-
 
 
 
