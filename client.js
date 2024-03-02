@@ -939,3 +939,20 @@ player.Ui.Hint.Value = "ТЫ ПОЛУЧИЛ(а) НОЖ"
 });
 
 
+var PassAreaTag = "Pass";
+var ViewsPassParameterName = "VivewsPass";
+var PassAreas = AreaService.GetByTag(PassAreaTag);
+var PassView = AreaViewService.GetContext().Get("PassView");
+PassView.Color = {r:0,g:1,b:1};
+PassView.Tags = ["pass"];
+PassView.Enable = true;
+var PassTrigger = AreaPlayerTriggerService.Get("PassTrigger");
+PassTrigger.Tags = ["pass"];
+PassTrigger.Enable = true;
+PassTrigger.OnEnter.Add(function(player){
+player.Ui.Hint.Value = "Пропуск стоит 500 очков, а у вас " + player.Properties.Kills.Value;
+if (player.Properties.Scores.Value > 499){
+ player.Properties.Scores.Value -= 500;
+ player.Properties.Spawns.Value += 1;
+ player.Ui.Hint.Value = "Вы купили 1 пропуск";
+}});
