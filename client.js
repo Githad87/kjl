@@ -840,9 +840,9 @@ var WarHat = AreaPlayerTriggerService.Get("низ4");
 WarHat.Tags = ["низ4"]; 
 WarHat.Enable = true;  
 WarHat.OnExit.Add(function(player, pvpSystem){ 
-if (player.Properties.Spawns.Value > 1){ 
+if (player.Properties.Spawns.Value > 149){ 
 player.Ui.Hint.Value = "ты прошел с пропуском !"; 
-}else{player.Ui.Hint.Value = "у тебя нет пропуска(1) !"; 
+}else{player.Ui.Hint.Value = "у тебя нет пропуска(150) !"; 
 player.Spawns.Spawn();  
 } 
 });
@@ -883,7 +883,7 @@ player.Ui.Hint.Value = "Пропуск стоит 1000 очков, а у вас 
 if (player.Properties.Scores.Value > 999){
  player.Properties.Scores.Value -= 1000;
  player.Properties.Spawns.Value += 1;
- player.Ui.Hint.Value = "Вы купили 1 пропуск";
+ player.Ui.Hint.Value = "Вы купили 150 пропуск";
 }});
 
 var ExplosiveAreaTag = "Melee";
