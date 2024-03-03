@@ -879,9 +879,9 @@ var PassTrigger = AreaPlayerTriggerService.Get("PassTrigger");
 PassTrigger.Tags = ["pass"];
 PassTrigger.Enable = true;
 PassTrigger.OnEnter.Add(function(player){
-player.Ui.Hint.Value = "Пропуск стоит 500 очков, а у вас " + player.Properties.Kills.Value;
-if (player.Properties.Scores.Value > 499){
- player.Properties.Scores.Value -= 500;
+player.Ui.Hint.Value = "Пропуск стоит 1000 очков, а у вас " + player.Properties.Kills.Value;
+if (player.Properties.Scores.Value > 999){
+ player.Properties.Scores.Value -= 1000;
  player.Properties.Spawns.Value += 1;
  player.Ui.Hint.Value = "Вы купили 1 пропуск";
 }});
