@@ -840,9 +840,9 @@ var WarHat = AreaPlayerTriggerService.Get("низ4");
 WarHat.Tags = ["низ4"]; 
 WarHat.Enable = true;  
 WarHat.OnExit.Add(function(player, pvpSystem){ 
-if (player.Properties.Spawns.Value > 149){ 
+if (player.Properties.Spawns.Value > 0){ 
 player.Ui.Hint.Value = "ты прошел с пропуском !"; 
-}else{player.Ui.Hint.Value = "у тебя нет пропуска(150) !"; 
+}else{player.Ui.Hint.Value = "у тебя нет пропуска(1) !"; 
 player.Spawns.Spawn();  
 } 
 });
