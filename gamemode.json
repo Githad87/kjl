@@ -1,7 +1,7 @@
 {
-  "Name": "<color=blue>РЕЖИМ ОТ ИВАНЕК</a>",
-  "Description": "Team Death Match. РЕЖИМ ОТ ИВАНЕК",
-  "StartClientVersion": 334,
+  "Name": "РЕЖИМ ОТ ИВАНЕК",
+  "Description": "Team Death Match. режим от иванек",
+  "StartClientVersion": 532,
   "MapFilter": {
     "IsBlank": false,
     "HasParcourEnd": false
@@ -40,4 +40,3 @@
       }
     ]
   }
-}
