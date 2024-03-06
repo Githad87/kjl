@@ -883,7 +883,7 @@ player.Ui.Hint.Value = "Пропуск стоит 1000 очков, а у вас 
 if (player.Properties.Scores.Value > 999){
  player.Properties.Scores.Value -= 1000;
  player.Properties.Spawns.Value += 1;
- player.Ui.Hint.Value = "Вы купили 150 пропуск";
+ player.Ui.Hint.Value = "Вы купили 1 пропуск";
 }});
 
 var ExplosiveAreaTag = "Melee";
